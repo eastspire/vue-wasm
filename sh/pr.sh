@@ -2,18 +2,11 @@
 
 REPO_URL="git@github.com:ltpp-universe/vue-wasm.git"
 BRANCH_NAME="feature-auto-pr"
-BASE_BRANCH="main"
+BASE_BRANCH="master"
 COMMIT_MESSAGE="Auto-generated commit for PR"
 PR_TITLE="Auto-generated PR"
 PR_BODY="This is an auto-generated pull request."
 GH_MERGE_METHOD="merge"
-
-if [ ! -d "./vue-wasm" ]; then
-    echo "Cloning repository..."
-    git clone "$REPO_URL"
-fi
-
-cd vue-wasm || exit
 
 echo "Fetching latest changes..."
 git checkout "$BASE_BRANCH"
